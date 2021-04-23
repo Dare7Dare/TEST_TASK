@@ -1,0 +1,64 @@
+@mixin transition-ease {
+    transition: all 0.5s ease-in-out;
+}
+
+@mixin flex-center-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flex-center-column {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+@mixin custom-1125 {
+    @media screen and (max-width: 1125px) {
+        @content;
+    }
+}
+
+@mixin custom-1045 {
+    @media screen and (max-width: 1045px) {
+        @content;
+    }
+}
+
+@mixin small-desktop {
+    @media screen and (max-width: 1000px) {
+        @content;
+    }
+}
+
+@mixin custom-850 {
+    @media screen and (max-width: 850px) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media screen and (max-width: 770px) {
+        @content;
+    }
+}
+
+@mixin custom-755 {
+    @media screen and (max-width: 755px) {
+        @content;
+    }
+}
+
+@mixin custom-645 {
+    @media screen and (max-width: 645px) {
+        @content;
+    }
+}
+
+@mixin mobile-lg {
+    @media screen and (max-width: 460px) {
+        @content;
+    }
+}
