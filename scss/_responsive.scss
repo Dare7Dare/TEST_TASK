@@ -131,18 +131,20 @@
     }
 
     label::before {
-        width: 15px;
-        height: 15px;
-        top: 5px;
+        width: 18px;
+        height: 18px;
+        top: 3px;
     }
 
     label::after {
-        width: 15px;
-        height: 15px;
-        top: 5px;
+        width: 18px;
+        height: 18px;
+        top: 3px;
     }
 
     .features {
+        padding: 50px 25px;
+
         h3 {
             line-height: 30px;
         }
@@ -197,6 +199,26 @@
             width: 100%;
             & > * {
                 width: 100%;
+            }
+        }
+    }
+
+    .pricing {
+        .price-plans {
+            @include flex-center-column;
+            .price-plan-item {
+                width: 100%;
+                .price-title {
+                    .show-business, .show-premium, .show-basic {
+                        display: block;
+                    }
+                }
+                .business-details, .premium-details, .basic-details{
+                    display: none;
+                }
+                .visible {
+                    display: flex;
+                }
             }
         }
     }
