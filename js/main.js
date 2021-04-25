@@ -1,5 +1,4 @@
 //hamburger menu
-
 const menuBtn = document.querySelector('.hamburger-menu');
 const hamburger = document.querySelector('.hamburger-menu-button');
 const nav = document.querySelector('.nav');
@@ -33,7 +32,6 @@ function toggleMenu() {
 
 
 //label checked
-
 $(document).on("change", "input[type='checkbox']", function () {
 	$(this).parent()[this.checked ? "addClass" : "removeClass"]("checked");
 });
@@ -44,41 +42,53 @@ $(document).on("change", "input[type='checkbox']", function () {
 
 
 
-// location
-const currency = document.querySelectorAll('#currency');
+// change currency
+// const currency = document.querySelectorAll('#currency');
 
-function fetchLocation() {
-    fetch('https://extreme-ip-lookup.com/json/')
-.then( res => res.json())
-.then(response => {
-    console.log("Country: ", response.country);
-    if(response.country === 'Austria' || 'Belgium' || 'Bulgaria' || 'Croatia' || 'Cyprus' || 'Czech Republic' || 'Dennmark' || 'Estonia' || 'Finland' || 'France' || 'Germany' || 'Greece' || 'Hungary' || 'Ireland' || 'Italy' || 'Latvia' || 'Lithuania' || 'Luxembourg' || 'Malta' || 'Netherlands' || 'Poland' || 'Portugal' || 'Romania' || 'Slovakia' || 'Slovenia' || 'Spain' || 'Sweden') {
-        for(var i = 0; i < currency.length; i++) {
-            console.log(typeof response.country);
-            currency[i].innerHTML = '€';
-        }
-    }
-    else if(response.country === 'Macedonia') {
-        currency[i].innerHTML = '£';
-    }
-    else {
-        currency[i].innerHTML = '$';
-    }
- })
- .catch((data, status) => {
-    console.log('Request failed');
- });
+// function fetchLocation() {
+//     fetch('https://extreme-ip-lookup.com/json/')
+// .then( res => res.json())
+// .then(response => {
+//     console.log("Country: ", response.country);
+//     if(response.country === 'Austria' || 'Belgium' || 'Bulgaria' || 'Croatia' || 'Cyprus' || 'Czech Republic' || 'Dennmark' || 'Estonia' || 'Finland' || 'France' || 'Germany' || 'Greece' || 'Hungary' || 'Ireland' || 'Italy' || 'Latvia' || 'Lithuania' || 'Luxembourg' || 'Malta' || 'Netherlands' || 'Poland' || 'Portugal' || 'Romania' || 'Slovakia' || 'Slovenia' || 'Spain' || 'Sweden') {
+//         for(var i = 0; i < currency.length; i++) {
+//             console.log(typeof response.country);
+//             currency[i].innerHTML = '€';
+//         }
+//     }
+//     else if(response.country === 'Macedonia') {
+//         currency[i].innerHTML = '£';
+//     }
+//     else {
+//         currency[i].innerHTML = '$';
+//     }
+//  })
+//  .catch((data, status) => {
+//     console.log('Request failed');
+//  });
 
  
+// }
+
+//change currency
+
+$('#currency').html(geoplugin_currencySymbol());
+$('.currency').html(geoplugin_currencySymbol());
+
+var result = document.getElementsByClassName("currency")[0].innerHTML;
+
+if(result == '€' || result == '£') {
+    $('#currency').html(geoplugin_currencySymbol());
+    $('.currency').html(geoplugin_currencySymbol());
 }
-
-
-
-
-
-
-
-
+else if (result == 'лв' || result == 'kn' || result == 'kč' || result == 'kr' || result == 'ft' || result == 'zl') {
+    $('#currency').html('€');
+    $('.currency').html('€');
+}
+else {
+    $('#currency').html('$');
+    $('.currency').html('$');
+}
 
 
 //show details
@@ -134,79 +144,3 @@ function showBasicDetails() {
     }
 }
 
-// let showMoreButtons = document.querySelectorAll('.show-more');
-// console.log(showMoreButtons.length);
-
-// let detailsColumns = document.querySelectorAll('.details-column');
-// console.log(detailsColumns.length);
-
-// let detailsBusinessShow = false;
-
-// for(var i = 0; i < showMoreButtons.length; i++) {
-//     showMoreButtons[i].addEventListener('click', () => {
-        
-//     });
-// }
-
-
-// test 1
-// for(var i = 0; i < showMoreButtons.length; i++) {
-//     showMoreButtons[i].addEventListener('click', () => {
-//                     if(i = 0) {
-//                         if(!detailsBasicShow) {
-//                             console.log(showMoreButtons.length);
-//                                     showBasic.classList.add('show');
-//                                     detailsBasic.classList.add('visible');
-//                                     detailsBasicShow = true;
-//                                 }
-//                                 else {
-//                                     showBasic.classList.remove('show');
-//                                     detailsBasic.classList.remove('visible');
-//                                     detailsBasicShow = false;
-//                                 }
-//                     }
-//                     else if(i = 1) {
-//                         if(!detailsPremiumShow) {
-//                                     showPremium.classList.add('show');
-//                                     detailsPremium.classList.add('visible');
-//                                     detailsPremiumShow = true;
-//                                 }
-//                                 else {
-//                                     showPremium.classList.remove('show');
-//                                     detailsPremium.classList.remove('visible');
-//                                     detailsPremiumShow = false;
-//                                 }
-//                     }
-//                     else {
-//                         if(!detailsBusinessShow) {
-//                                     showBusiness.classList.add('show');
-//                                     detailsBusiness.classList.add('visible');
-//                                     detailsBusinessShow = true;
-//                                 }
-//                                 else {
-//                                     showBusiness.classList.remove('show');
-//                                     detailsBusiness.classList.remove('visible');
-//                                     detailsBusinessShow = false;
-//                                 }
-//                     }
-//                 });
-// }
-
-
-//test 2
-// for(var i = 0; i < showMoreButtons.length; i++) {
-//     showMoreButtons[i].addEventListener('click', () => {
-//         if(!detailsBusinessShow) {
-//                     console.log('NE');
-//                     detailsBusinessShow = true;
-//                     showMoreButtons.forEach(item => item.classList.add('show'));
-//                     detailsColumns.forEach(item => item.classList.add('visible'));
-//                 }
-//                 else {
-//                     console.log('DA');  
-//                     detailsBusinessShow = false; 
-//                     showMoreButtons.forEach(item => item.classList.remove('show'));
-//                     detailsColumns.forEach(item => item.classList.remove('visible'));
-//                 }
-//     });
-// }
