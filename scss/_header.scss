@@ -18,11 +18,23 @@
             color: black;
         }
 
+        button:hover {
+            color: green;
+        }
+
         .get-started {
             background: green;
             border-radius: 5px;
             color: white;
-            padding: 10px 20px;
+            padding: 8px 20px;
+            border: 2px solid green;
+            transition: .6s ease;
+        }
+
+        .get-started:hover {
+            background: white;
+            color: green;
+            background-clip: padding-box;
         }
     }
 

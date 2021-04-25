@@ -20,11 +20,19 @@
             @include flex-center-column;
             align-items: flex-start;
             padding: 30px 30px 20px 30px;
+            transition: .6s ease;
+
+            &:hover {
+                box-shadow: 0px 10px 30px rgba(57,56,61, 1);
+            }
 
             h2 {
                 font-weight: bold;
                 span {
                     font-size: 12px;
+                }
+                #currency {
+                    font-size: 28px;
                 }
             }
 
@@ -81,10 +89,11 @@
                     }
                 }
                 .show {
-                    -ms-transform: rotate(180deg);
-                    -moz-transform: rotate(180deg);
-                    -webkit-transform: rotate(180deg);
-                    transform: rotate(180deg);
+                    -ms-transform: rotate(900deg);
+                    -moz-transform: rotate(900deg);
+                    -webkit-transform: rotate(900deg);
+                    transform: rotate(900deg);
+                    @include long-transition-ease;
                 }
             }
 

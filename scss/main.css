@@ -38,11 +38,24 @@
   color: black;
 }
 
+.header-buttons button:hover {
+  color: green;
+}
+
 .header-buttons .get-started {
   background: green;
   border-radius: 5px;
   color: white;
-  padding: 10px 20px;
+  padding: 8px 20px;
+  border: 2px solid green;
+  -webkit-transition: .6s ease;
+  transition: .6s ease;
+}
+
+.header-buttons .get-started:hover {
+  background: white;
+  color: green;
+  background-clip: padding-box;
 }
 
 .header .nav {
@@ -199,7 +212,7 @@ label::before {
   width: 18px;
   height: 18px;
   border: none;
-  border-radius: 5px;
+  border-radius: 3px;
   background: green;
   padding-top: 2px;
   padding-right: 0.5px;
@@ -223,7 +236,7 @@ input[type="checkbox"]:checked + label::after {
 label::after {
   content: "";
   border: 1px solid red;
-  border-radius: 5px;
+  border-radius: 3px;
   width: 18px;
   height: 18px;
   position: absolute;
@@ -333,22 +346,34 @@ label::after {
 }
 
 .hero .checkboxes .checkbox-item {
-  background: #e0fdff;
+  background: #f1feff;
   padding: 5px 10px;
   border-radius: 20px;
 }
 
+.hero .checkboxes .checkbox-item .checkbox-item:hover {
+  background: red;
+}
+
 .hero .checkboxes .checked {
-  background: #00b679;
+  background: #cbf2f7;
 }
 
 .hero .get-started {
   margin: 50px 0;
-  border: none;
+  border: 2px solid green;
   background: green;
   border-radius: 5px;
   color: white;
-  padding: 10px 20px;
+  padding: 8px 20px;
+  -webkit-transition: .6s ease;
+  transition: .6s ease;
+}
+
+.hero .get-started:hover {
+  background: white;
+  color: green;
+  background-clip: padding-box;
 }
 
 .hero .hero-image {
@@ -911,6 +936,13 @@ label::after {
       -ms-flex-align: start;
           align-items: flex-start;
   padding: 30px 30px 20px 30px;
+  -webkit-transition: .6s ease;
+  transition: .6s ease;
+}
+
+.pricing .price-plans .price-plan-item:hover {
+  -webkit-box-shadow: 0px 10px 30px #39383d;
+          box-shadow: 0px 10px 30px #39383d;
 }
 
 .pricing .price-plans .price-plan-item h2 {
@@ -919,6 +951,10 @@ label::after {
 
 .pricing .price-plans .price-plan-item h2 span {
   font-size: 12px;
+}
+
+.pricing .price-plans .price-plan-item h2 #currency {
+  font-size: 28px;
 }
 
 .pricing .price-plans .price-plan-item .price-title {
@@ -988,8 +1024,10 @@ label::after {
 }
 
 .pricing .price-plans .price-plan-item .price-title .show {
-  -webkit-transform: rotate(180deg);
-  transform: rotate(180deg);
+  -webkit-transform: rotate(900deg);
+  transform: rotate(900deg);
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
 }
 
 .pricing .price-plans .price-plan-item .plan-title {

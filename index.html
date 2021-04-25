@@ -51,43 +51,43 @@
         </div>
 
         <div class="checkboxes">
-            <div class="checkbox-item" id="project-management-item">
+            <div class="checkbox-item">
                     <input type="checkbox" id="project-management" name="project-management" value="Project Management">
                     <label for="project-management">&nbsp;Project Management</label>
             </div>
-            <div class="checkbox-item" id="marketing-item">
+            <div class="checkbox-item">
                     <input type="checkbox" id="marketing" name="marketing" value="Project Management">
                     <label class="marketing" for="marketing">&nbsp;Marketing</label>
             </div>
-            <div class="checkbox-item" id="crm-item">
+            <div class="checkbox-item">
                     <input type="checkbox" id="crm" name="crm" value="Project Management">
-                    <label class="crm" for="crm">&nbspCRM and Sales</label>
+                    <label class="crm" for="crm">&nbsp;CRM and Sales</label>
             </div>
-            <div class="checkbox-item" id="design-item">
+            <div class="checkbox-item">
                     <input type="checkbox" id="design" name="design" value="Project Management">
                     <label class="design" for="design">&nbsp;Creative and Design</label>
             </div>
-            <div class="checkbox-item" id="software-item">
+            <div class="checkbox-item">
                     <input type="checkbox" id="software" name="software" value="Project Management">
                     <label class="software" for="software">&nbsp;Software Development</label>
             </div>
-            <div class="checkbox-item" id="task-item">
+            <div class="checkbox-item">
                     <input type="checkbox" id="task" name="task" value="Project Management">
                     <label class="task" for="task">&nbsp;Task Management</label>
             </div>
-            <div class="checkbox-item" id="construction-item">
+            <div class="checkbox-item">
                     <input type="checkbox" id="construction" name="construction" value="Project Management">
                     <label class="construction" for="construction">&nbsp;Construction</label>
             </div>
-            <div class="checkbox-item" id="hr-item">
+            <div class="checkbox-item">
                     <input type="checkbox" id="hr" name="hr" value="Project Management">
                     <label class="hr" for="hr">&nbsp;HR and Recruitment</label>
             </div>
-            <div class="checkbox-item" id="it-item">
+            <div class="checkbox-item">
                     <input type="checkbox" id="it" name="it" value="Project Management">
                     <label class="it" for="it">&nbsp;IT</label>
             </div>
-            <div class="checkbox-item" id="solutions-item">
+            <div class="checkbox-item">
                     <input type="checkbox" id="solutions" name="solutions" value="Project Management">
                     <label class="solutions" for="solutions">&nbsp;200+ Solutions</label>
             </div>
@@ -244,14 +244,14 @@
                 </div>
                 <div class="price-title">
                     <h2>Free</h2>
-                    <button class="show-basic">
+                    <button class="show-basic show-more">
                         <div class="icon">
                             <i class="fas fa-chevron-down"></i>
                         </div>
                     </button>
                 </div>
                 <p>MAKE GREAT FRIENDS.</p>
-                <div class="basic-details">
+                <div class="basic-details details-column">
                     <div class="info-line">
                         <i class="fas fa-check"></i>
                         <p>Sync up to 2 devices</p>
@@ -286,8 +286,8 @@
                     <h5>Premium</h5>
                 </div>
                 <div class="price-title">
-                    <h2>$4.99 <span>/ MONTH</span></h2>
-                    <button class="show-premium">
+                    <h2><span id="currency">$</span>4.99 <span>/ MONTH</span></h2>
+                    <button class="show-premium show-more">
                         <div class="icon">
                             <i class="fas fa-chevron-down"></i>
                         </div>
@@ -295,7 +295,7 @@
                 </div>
                 
                 <p>BE MORE POPULAR.</p>
-                <div class="premium-details">
+                <div class="premium-details details-column">
                     <div class="info-line">
                         <i class="fas fa-arrow-left"></i>
                         <p>Everything in Basic</p>
@@ -342,15 +342,15 @@
                     <h5>Business</h5>
                 </div>
                 <div class="price-title">
-                    <h2>$10.99 <span>/ MONTH</span></h2>
-                    <button class="show-business">
+                    <h2><span id="currency">$</span>10.99 <span>/ MONTH</span></h2>
+                    <button class="show-business show-more">
                         <div class="icon">
                             <i class="fas fa-chevron-down"></i>
                         </div>
                     </button>
                 </div>
                 <p>COLLABORATE ACROSS YOUR COUNTRY.</p>
-                <div class="business-details">
+                <div class="business-details details-column">
                     <div class="info-line">
                         <i class="fas fa-arrow-left"></i>
                         <p>Everything in Premium</p>
@@ -397,5 +397,9 @@
     <script src="https://kit.fontawesome.com/6d2ea823d0.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
     <script src="./js/main.js"></script>
+
+    <script>
+        window.onload = fetchLocation();
+    </script>
 </body>
 </html>
